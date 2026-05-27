@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    
+    <title>Crypto Cobra - Official Resource Hub | Crypto Trading & Community</title>
+    <meta name="description" content="Official Crypto Cobra resource hub. Connect with Crypto Cobra across all platforms - Telegram, YouTube, X, Instagram, Facebook, and the official blog. Crypto trading insights and community.">
+    <meta name="keywords" content="Crypto Cobra, crypto trading, cryptocurrency, Telegram crypto, crypto community, crypto signals, crypto education">
+    
+    <meta property="og:title" content="Crypto Cobra - Official Resource Hub">
+    <meta property="og:description" content="Connect with Crypto Cobra across all platforms. Crypto trading insights, signals, and community.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cryptoscobra.com/">
+    
+    <link rel="canonical" href="https://cryptoscobra.com/">
+    
+    <style>
+        :root {
+            --primary: #2ecc71;
+            --primary-dark: #27ae60;
+            --dark: #1a1a2e;
+            --darker: #16213e;
+            --light: #e8f5e9;
+            --text: #333;
+            --text-light: #666;
+            --white: #fff;
+            --card-bg: #fff;
+            --border: #e0e0e0;
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            font-size: 32px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 0;
+            border-bottom: 2px solid transparent;
+        }
+        
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(46, 204, 113, 0.1) 0%, transparent 70%);
+        }
+        
+        .hero .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(46, 204, 113, 0.15);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            border: 1px solid rgba(46, 204, 113, 0.3);
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            color: var(--white);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h1 .highlight {
+            color: var(--primary);
+        }
+        
+        .hero p {
+            font-size: 18px;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Social Links Section */
+        .social-links-section {
+            padding: 40px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: var(--white);
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #888;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .social-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--white);
+        }
+        
+        .social-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(46, 204, 113, 0.2);
+            background: rgba(46, 204, 113, 0.1);
+        }
+        
+        .social-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .social-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+        
+        .social-card .username {
+            color: var(--primary);
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .social-card p {
+            color: #888;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        
+        .social-card .arrow {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--primary);
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+        
+        .social-card:hover .arrow {
+            transform: translateX(5px);
+        }
+        
+        /* Featured Card */
+        .social-card.featured {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(46, 204, 113, 0.15), rgba(39, 174, 96, 0.1));
+            border-color: var(--primary);
+        }
+        
+        .social-card.featured .social-icon {
+            font-size: 50px;
+        }
+        
+        /* Telegram Colors */
+        .social-card.telegram { --accent: #0088cc; }
+        .social-card.telegram:hover { 
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(0, 136, 204, 0.2);
+            background: rgba(0, 136, 204, 0.1);
+        }
+        
+        /* YouTube Colors */
+        .social-card.youtube { --accent: #ff0000; }
+        .social-card.youtube:hover { 
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(255, 0, 0, 0.2);
+            background: rgba(255, 0, 0, 0.1);
+        }
+        
+        /* X Colors */
+        .social-card.twitter { --accent: #1da1f2; }
+        .social-card.twitter:hover { 
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(29, 161, 242, 0.2);
+            background: rgba(29, 161, 242, 0.1);
+        }
+        
+        /* Instagram Colors */
+        .social-card.instagram { --accent: #e4405f; }
+        .social-card.instagram:hover { 
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(228, 64, 95, 0.2);
+            background: rgba(228, 64, 95, 0.1);
+        }
+        
+        /* Facebook Colors */
+        .social-card.facebook { --accent: #1877f2; }
+        .social-card.facebook:hover { 
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(24, 119, 242, 0.2);
+            background: rgba(24, 119, 242, 0.1);
+        }
+        
+        /* Blog Card */
+        .social-card.blog { --accent: #f39c12; }
+        .social-card.blog:hover { 
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(243, 156, 18, 0.2);
+            background: rgba(243, 156, 18, 0.1);
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .about-content h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .about-content p {
+            color: #b0b0b0;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .cta-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            border-radius: 20px;
+            padding: 40px;
+            color: var(--white);
+        }
+        
+        .cta-box h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-box p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary-dark);
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--darker);
+            padding: 30px 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .nav-links { gap: 15px; }
+            .nav-links a { font-size: 13px; }
+            .social-grid { grid-template-columns: 1fr; }
+            .social-card.featured { grid-column: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <span class="logo-icon">🐍</span>
+                <span class="logo-text">Crypto Cobra</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="social.html">Social</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-badge">🐍 Official Resource Hub</div>
+                <h1>Welcome to <span class="highlight">Crypto Cobra</span></h1>
+                <p>Your trusted source for cryptocurrency trading insights, market analysis, and a thriving crypto community. Connect with us across all platforms.</p>
+            </div>
+        </section>
+
+        <!-- Social Links Section -->
+        <section class="social-links-section">
+            <div class="container">
+                <h2 class="section-title">Connect With Crypto Cobra</h2>
+                <p class="section-subtitle">Join our community across all platforms for the latest crypto insights</p>
+                
+                <div class="social-grid">
+                    <!-- Telegram - Featured -->
+                    <a href="https://t.me/cryptoscobra" target="_blank" rel="dofollow" class="social-card telegram featured">
+                        <div class="social-icon">📱</div>
+                        <h3>Telegram Community</h3>
+                        <div class="username">@cryptoscobra</div>
+                        <p>Join our active Telegram community for real-time crypto discussions, signals, and market updates. The heart of the Crypto Cobra community.</p>
+                        <span class="arrow">Join →</span>
+                    </a>
+                    
+                    <!-- Website -->
+                    <a href="https://cryptoscobra.com/" target="_blank" rel="dofollow" class="social-card blog">
+                        <div class="social-icon">🌐</div>
+                        <h3>Official Website</h3>
+                        <div class="username">cryptoscobra.com</div>
+                        <p>Visit our main website for comprehensive crypto resources, tools, and information.</p>
+                        <span class="arrow">Visit →</span>
+                    </a>
+                    
+                    <!-- Blog -->
+                    <a href="https://cryptoscobra.com/blog/" target="_blank" rel="dofollow" class="social-card blog">
+                        <div class="social-icon">📝</div>
+                        <h3>Crypto Blog</h3>
+                        <div class="username">cryptoscobra.com/blog</div>
+                        <p>Read in-depth articles on crypto trading strategies, market analysis, and blockchain technology.</p>
+                        <span class="arrow">Read →</span>
+                    </a>
+                    
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@Cryptoscobra/" target="_blank" rel="dofollow" class="social-card youtube">
+                        <div class="social-icon">🎥</div>
+                        <h3>YouTube Channel</h3>
+                        <div class="username">@Cryptoscobra</div>
+                        <p>Watch video tutorials, market breakdowns, and crypto education content on our YouTube channel.</p>
+                        <span class="arrow">Watch →</span>
+                    </a>
+                    
+                    <!-- X (Twitter) -->
+                    <a href="https://x.com/cryptoscobra" target="_blank" rel="dofollow" class="social-card twitter">
+                        <div class="social-icon">❎</div>
+                        <h3>X (Twitter)</h3>
+                        <div class="username">@cryptoscobra</div>
+                        <p>Follow us on X for quick crypto updates, market insights, and community engagement.</p>
+                        <span class="arrow">Follow →</span>
+                    </a>
+                    
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/cryptocobra1/" target="_blank" rel="dofollow" class="social-card instagram">
+                        <div class="social-icon">📸</div>
+                        <h3>Instagram</h3>
+                        <div class="username">@cryptocobra1</div>
+                        <p>Follow our Instagram for crypto visuals, infographics, and behind-the-scenes content.</p>
+                        <span class="arrow">Follow →</span>
+                    </a>
+                    
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/Cryptoscobra/" target="_blank" rel="dofollow" class="social-card facebook">
+                        <div class="social-icon">#️⃣</div>
+                        <h3>Facebook</h3>
+                        <div class="username">@Cryptoscobra</div>
+                        <p>Like our Facebook page for crypto news, updates, and community discussions.</p>
+                        <span class="arrow">Like →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="about-content">
+                <h2>🐍 About Crypto Cobra</h2>
+                <p>Crypto Cobra is dedicated to providing high-quality cryptocurrency trading education, market insights, and community support. Whether you're a beginner or experienced trader, our platforms offer valuable resources to help you navigate the crypto market.</p>
+                <p>Join thousands of community members across Telegram, YouTube, X, Instagram, and Facebook to stay updated with the latest in cryptocurrency and blockchain technology.</p>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-box">
+                <h2>Join Our Telegram Community</h2>
+                <p>Get real-time crypto signals, market analysis, and connect with like-minded traders in our active Telegram group.</p>
+                <a href="https://t.me/cryptoscobra" target="_blank" rel="dofollow" class="cta-button">
+                    Join @cryptoscobra on Telegram
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://cryptoscobra.com/">Website</a>
+            <a href="https://cryptoscobra.com/blog/">Blog</a>
+            <a href="https://t.me/cryptoscobra">Telegram</a>
+            <a href="https://www.youtube.com/@Cryptoscobra/">YouTube</a>
+            <a href="https://x.com/cryptoscobra">X</a>
+            <a href="https://www.instagram.com/cryptocobra1/">Instagram</a>
+            <a href="https://www.facebook.com/Cryptoscobra/">Facebook</a>
+        </div>
+        <p>© 2024 Crypto Cobra. All rights reserved. | <a href="sitemap.html">Sitemap</a></p>
+    </footer>
+
+</body>
+</html>
